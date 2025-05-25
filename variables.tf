@@ -1,20 +1,15 @@
 variable "hcloud_token" {
-  description = "Hetzner Cloud API token"
   type        = string
+  description = "Hetzner Cloud API token"
   sensitive   = true
 }
 
 variable "ssh_public_key" {
-  description = "Path to SSH public key"
   type        = string
+  description = "Path to your SSH public key"
 }
 
 variable "location" {
-  default     = "fsn1"
-  description = "Hetzner location"
-}
-
-variable "worker_count" {
-  description = "Number of Kubernetes worker nodes"
-  default     = 2
+  type    = string
+  default = "fsn1"
 }
